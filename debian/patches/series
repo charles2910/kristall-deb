@@ -1,0 +1,4 @@
+010-Add_debian_font_path.patch
+020-Clean_manpage.patch
+030-Make_build_reproducible.patch
+040-Fix_CPPFLAGS_in_qmake.patch

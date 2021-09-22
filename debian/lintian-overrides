@@ -1,0 +1,3 @@
+# Overriding a false positive (an ocasional byte sequence, not a word).
+kristall: spelling-error-in-binary usr/bin/kristall mOR more
+kristall: spelling-error-in-binary usr/bin/kristall whE when

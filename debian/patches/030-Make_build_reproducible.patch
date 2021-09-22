@@ -1,0 +1,16 @@
+Description: Removes date from manpage and make kristall reproducible
+Author: Carlos Henrique Lima Melara <charlesmelara@outlook.com>
+Forwarded: https://github.com/MasterQ32/kristall/issues/244
+Last-Update: 2021-09-11
+
+--- kristall-0.3+git20210303.763bd81+dfsg.orig/doc/kristall-head.man
++++ kristall-0.3+git20210303.763bd81+dfsg/doc/kristall-head.man
+@@ -2,7 +2,7 @@
+ .\" Kristall man page
+ .\"
+ .
+-.TH KRISTALL 1 $(DATE) Unix "User manuals"
++.TH KRISTALL 1 Unix "User manuals"
+ .SH NAME
+ .PP
+ .B kristall

@@ -1,0 +1,24 @@
+Source: kristall
+Section: web
+Priority: optional
+Maintainer: Carlos Henrique Lima Melara <charlesmelara@outlook.com>
+Build-Depends: debhelper-compat (= 13),
+               libcmark-dev,
+               libqt5svg5-dev,
+               libssl-dev,
+               qt5-qmake,
+               qtmultimedia5-dev
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://kristall.random-projects.net/
+Vcs-Git: https://salsa.debian.org/debian/kristall.git
+Vcs-Browser: https://salsa.debian.org/debian/kristall
+
+Package: kristall
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: high-quality visual cross-platform gemini browser
+ Kristall is a browser without support for css/js/wasm or graphical
+ websites. It can display user-styled documents in several formats,
+ including gemini, html, markdown and others provided by a server
+ via gemini, gopher, http, finger, etc.

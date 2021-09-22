@@ -1,0 +1,28 @@
+Description: Removes Qt resource system usage for font that is packaged
+Author: Carlos Henrique Lima Melara <charlesmelara@outlook.com>
+Forwarded: not-needed
+Last-Update: 2021-02-16
+
+Index: kristall/src/fonts.qrc
+===================================================================
+--- kristall.orig/src/fonts.qrc
++++ kristall/src/fonts.qrc
+@@ -1,6 +1,5 @@
+ <RCC>
+     <qresource prefix="/">
+         <file>fonts/OpenMoji-Color.ttf</file>
+-        <file>fonts/NotoColorEmoji.ttf</file>
+     </qresource>
+ </RCC>
+Index: kristall/src/main.cpp
+===================================================================
+--- kristall.orig/src/main.cpp
++++ kristall/src/main.cpp
+@@ -73,7 +73,6 @@ static void addEmojiSubstitutions()
+ 
+     // Provide OpenMoji font for a safe fallback
+     QFontDatabase::addApplicationFont(":/fonts/OpenMoji-Color.ttf");
+-    QFontDatabase::addApplicationFont(":/fonts/NotoColorEmoji.ttf");
+ 
+     QStringList emojiFonts = {
+         // Use system fonts on windows/mac

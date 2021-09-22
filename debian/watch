@@ -1,0 +1,6 @@
+version=4
+# GitHub hosted projects
+opts="filenamemangle=s%(?:.*?)?V?(\d[\d.]*)\.tar\.gz%kristall-$1.tar.gz%, \
+   dversionmangle=s/@DEB_EXT@//" \
+https://github.com/MasterQ32/kristall/releases \
+   (?:.*?/)?V?@ANY_VERSION@@ARCHIVE_EXT@

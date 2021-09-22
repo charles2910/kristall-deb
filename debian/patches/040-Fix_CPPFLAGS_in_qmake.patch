@@ -1,0 +1,19 @@
+Description: Hack to include CPPFLAGS with qmake compilation
+Author: Carlos Henrique Lima Melara <charlesmelara@outlook.com>
+Forwarded: https://github.com/MasterQ32/kristall/issues/244
+Last-Update: 2021-09-12
+
+Index: kristall/src/kristall.pro
+===================================================================
+--- kristall.orig/src/kristall.pro
++++ kristall/src/kristall.pro
+@@ -28,6 +28,9 @@ linux {
+         QMAKE_CFLAGS   *= $(shell dpkg-buildflags --get CFLAGS)
+         QMAKE_CXXFLAGS *= $(shell dpkg-buildflags --get CXXFLAGS)
+         QMAKE_LFLAGS   *= $(shell dpkg-buildflags --get LDFLAGS)
++        # qmake does not use QMAKE_CPPFLAGS, this is a hack to include it
++        QMAKE_CXXFLAGS += $(shell dpkg-buildflags --get CPPFLAGS)
++        QMAKE_CFLAGS   += $(shell dpkg-buildflags --get CPPFLAGS)
+     }
+ }
+ 
