@@ -1,0 +1,74 @@
+# Kristall Changelog
+
+## 0.4 - Improved user experience
+* Basic Emoji rendering support using OpenMoji
+* Improved favourites: Adds grouping and custom names
+* Adds support for text/kristall-theme mime to preview/install kristall themes via the browser surface
+* Adds Ctrl-F search function
+* Mouse middle now opens links in new tabs
+* Ctrl + mouse left opens links in new tabs
+* Mouse middle now closes tabs when clicking them
+* Improved settings system with folder-based approach
+* Document styles are now saved as files which are exchangeable
+* Adds colored icons to dark/light theme so it has improved contrast
+* New action: "View/Show document source" will display the raw data of the document in a small separate window
+* Change: Makes TLS editor columns sortable
+
+## 0.3 - TLS and security
+* Adds support for transient client certificates
+* Adds support for permanent client certificates
+* Adds this changelog to Kristall itself
+* Adds configurable server timeout
+* Adds support for server certificate handling (TOFU) for gemini://
+* Adds support for server certificate handling (TOFU) for https://
+* Adds nice error pages instead of silently ignoring errors or displaying a message box
+* Adds key shortcut: Pressing Escape in the URL bar now resets URL bar to current location
+* Adds support for non-UTF8 encodings. iconv really helps here!
+* Adds configurable and improved redirection handling including warnings for potentially malicious redirects.
+* Adds improved text highlighting, now works with UTF-8. Still experimental, though 😉
+* Adds about:style-preview
+* Adds new UI theme: OS Default (uses Qt's default skin)
+* Fixed bug: Status bar label now does elide links that are too long instead of resizing the window.
+* Fixed bug: Gopher end-of-file marker is now better detected.
+* Fixed bug: Auto-URL detection works with leading/trailing spaces
+* Fixed bug: Loading stats in status bar are now switched between tabs even when no active change is happening.
+* Fixes bug: Gemini query input now checks if the URL exceeds the specified limit.
+* Fixed bug: Outline rendering is now stable
+* Fixes bug: Media player now stops playing when switching to another site.
+* Refactored internal network structure. Makes room for future improvements and increases network stability a lot.
+* Refactored mime type handling
+* Updates application icon thanks to tiwesdaeg
+* Survives conman's client torture suite
+* Survives egsam's client torture suite
+
+## 0.2 - The protocol update
+* Implement Ctrl+D/*Add to favourites* menu item
+* Implement Ctrl+S/*Save as...* menu item
+* Add display for "non-recognized files"
+* Added support for gopher:// and gophermaps
+* Added "go to home" menu 
+* Added support for video/* and audio/* via QMediaPlayer
+* Added support for file:// scheme
+* Added status bar with loading time, file size and mime type
+* Added support for command line arguments
+* Added option to render all text/* documents as plain text.
+* Added option to render gopher maps with icons *OR* text only
+* Fixed bug: Correct URL escaping for gemini requests.
+* Added progress display in status bar with loading time and already transferred bytes
+* Added support for finger:// protocol
+* Added experimental *highlighting* and _underlining_ for text/gemini
+* Desktop file is provided for integrating with XDG
+* Fixed bug: Preformatted lines don't break anymore
+* text/gemini parsing updated
+* Added support for block quotes
+* Added help file
+* Added shortcut to focus URL bar
+* Added possibility to save/load/share theme presets. Make everything colorful!
+* Added a lot of context menus
+* Added possibility to open links into a new tab
+* Added possibility to open history and favourite items into new tab or same tab
+* Added option to use your default OS protocol handler instead of displaying an error message.
+* Improved image pan and zooming. Explore those graphics!
+
+## 0.1 - The start
+* Initial release

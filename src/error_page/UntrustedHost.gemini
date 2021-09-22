@@ -1,0 +1,12 @@
+# Untrusted Host
+
+The host you tried to visit is not trusted by Kristall. If you do trust this server, please add it to the list of trusted certificates!
+
+Fingerprint:
+```
+%1
+```
+
+=> kristall+ctrl:ignore-tls-safe Continue to site (once)
+
+=> kristall+ctrl:add-fingerprint Add fingerprint to trusted hosts

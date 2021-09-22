@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="settings">
+    <normaloff>.</normaloff>.</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="generic">
+      <attribute name="icon">
+       <iconset theme="settings">
+        <normaloff>.</normaloff>.</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Generic</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>UI Theme</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="ui_theme"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_34">
+         <property name="text">
+          <string>Icon Theme</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="icon_theme"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_1">
+         <property name="text">
+          <string>UI Density</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="ui_density"/>
+       </item>
+
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>Start Page:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="start_page">
+         <property name="placeholderText">
+          <string>about://blank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>Search engine:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="search_engine">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>Enabled Protocols</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QCheckBox" name="enable_gemini">
+           <property name="text">
+            <string>Gemini</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enable_gopher">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Gopher</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enable_finger">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Finger</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enable_http">
+           <property name="text">
+            <string>HTTP</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enable_https">
+           <property name="text">
+            <string>HTTPS</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_19">
+         <property name="text">
+          <string>Text Rendering</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QRadioButton" name="fancypants_on">
+           <property name="text">
+            <string>Fancy</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">textRenderingBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="fancypants_off">
+           <property name="text">
+            <string>Always plain text</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">textRenderingBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_18">
+         <property name="text">
+          <string>Enable text highlights</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QRadioButton" name="texthl_on">
+           <property name="text">
+            <string>On (Experimental)</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">textHighlightsBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="texthl_off">
+           <property name="text">
+            <string>Off</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">textHighlightsBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>Gopher Map</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QRadioButton" name="gophermap_icon">
+           <property name="text">
+            <string>Use icons</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">gophermapBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="gophermap_text">
+           <property name="text">
+            <string>Use text only</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">gophermapBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_22">
+         <property name="text">
+          <string>Unknown Scheme</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QRadioButton" name="scheme_os_default">
+           <property name="text">
+            <string>Use OS default handler</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="scheme_error">
+           <property name="text">
+            <string>Display error message</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">buttonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>Hidden files in file:// directories</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QRadioButton" name="show_hidden_files">
+           <property name="text">
+            <string>Show</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">hiddenFilesBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="hide_hidden_files">
+           <property name="text">
+            <string>Hide</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">hiddenFilesBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>URL bar highlights</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QRadioButton" name="urlbarhl_fancy">
+           <property name="text">
+            <string>Fancy</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">urlbarBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="urlbarhl_none">
+           <property name="text">
+            <string>None</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">urlbarBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="label_39">
+         <property name="text">
+          <string>Use typographer's quotes</string>
+         </property>
+         <property name="toolTip">
+          <string>Replace single and double quotes with curly typographer quotes.</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QRadioButton" name="fancyquotes_on">
+           <property name="text">
+            <string>On</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">quotesBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="fancyquotes_off">
+           <property name="text">
+            <string>Off</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">quotesBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="emojis_label">
+         <property name="text">
+          <string>Render emojis</string>
+         </property>
+         <property name="toolTip">
+          <string>Whether to render emojis in a page.</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <widget class="QRadioButton" name="emojis_on">
+           <property name="text">
+            <string>On</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">emojisBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="emojis_off">
+           <property name="text">
+            <string>Off</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">emojisBtnGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="14" column="0">
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>Max. Number of Redirections</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1">
+        <widget class="QSpinBox" name="max_redirects">
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="0">
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>Redirection Handling</string>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="1">
+        <widget class="QComboBox" name="redirection_mode"/>
+       </item>
+       <item row="16" column="0">
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>Network Timeout</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="1">
+        <widget class="QSpinBox" name="network_timeout">
+         <property name="suffix">
+          <string> ms</string>
+         </property>
+         <property name="minimum">
+          <number>100</number>
+         </property>
+         <property name="maximum">
+          <number>90000</number>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="0">
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>Additional toolbar buttons</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_99">
+         <item>
+          <widget class="QCheckBox" name="enable_home_btn">
+           <property name="text">
+            <string>Home</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enable_newtab_btn">
+           <property name="text">
+            <string>New tab</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enable_root_btn">
+           <property name="text">
+            <string>Root (/)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enable_parent_btn">
+           <property name="text">
+            <string>Parent (..)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="18" column="0">
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>Total cache size limit</string>
+         </property>
+         <property name="toolTip">
+          <string>The total amount of memory that can be occupied by cached items. Set to zero to disable in-memory caching.</string>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="1">
+        <widget class="QSpinBox" name="cache_limit">
+         <property name="suffix">
+          <string> KiB</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>4000000</number>
+         </property>
+        </widget>
+       </item>
+
+       <item row="19" column="0">
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>Cached item size threshold</string>
+         </property>
+         <property name="toolTip">
+          <string>Items which are below this threshold are cached in memory. Any above are simply discarded.</string>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="1">
+        <widget class="QSpinBox" name="cache_threshold">
+         <property name="suffix">
+          <string> KiB</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>102400</number>
+         </property>
+        </widget>
+       </item>
+
+       <item row="20" column="0">
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>Cached item life</string>
+         </property>
+         <property name="toolTip">
+          <string>How long cached items last before they are expired and require a reload.</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_25">
+         <item>
+          <widget class="QSpinBox" name="cache_life">
+           <property name="suffix">
+            <string> minutes</string>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>8760</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enable_unlimited_cache_life">
+           <property name="text">
+            <string>Unlimited item life</string>
+           </property>
+           <property name="toolTip">
+            <string>Sets cached items to be unexpirable. Items will only be removed if the cache is full.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+      </layout>
+     </widget>
+     <widget class="QWidget" name="style_tab">
+      <attribute name="icon">
+       <iconset theme="palette">
+        <normaloff>.</normaloff>.</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Style</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_23">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <widget class="QScrollArea" name="style_scroll_area">
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="style_scroll_widget">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>510</width>
+              <height>767</height>
+             </rect>
+            </property>
+            <layout class="QFormLayout" name="style_scroll_layout">
+             <item row="0" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_13">
+               <item>
+                <widget class="QLabel" name="bg_preview">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="textFormat">
+                  <enum>Qt::PlainText</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="bg_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Background Color</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Standard Font</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_14">
+               <item>
+                <widget class="QLabel" name="std_preview">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="text">
+                  <string>This text will be displayed for normal text.</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="std_change_font">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="font">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="std_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>Preformatted Font</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_15">
+               <item>
+                <widget class="QLabel" name="pre_preview">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="text">
+                  <string>This text will be displayed for preformatted text.</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="pre_change_font">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="font">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="pre_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>H1 Font</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_16">
+               <item>
+                <widget class="QLabel" name="h1_preview">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="text">
+                  <string>This text will be displayed for a level 1 heading.</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="h1_change_font">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="font">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="h1_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>H2 Font</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_18">
+               <item>
+                <widget class="QLabel" name="h2_preview">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="text">
+                  <string>This text will be displayed for a level 2 heading.</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="h2_change_font">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="font">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="h2_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>H3 Font</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_19">
+               <item>
+                <widget class="QLabel" name="h3_preview">
+                 <property name="styleSheet">
+                  <string notr="true">border: 1px solid black;</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="text">
+                  <string>This text will be displayed for a level 3 heading.</string>
+                 </property>
+                 <property name="textFormat">
+                  <enum>Qt::PlainText</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="h3_change_font">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="font">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="h3_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_33">
+               <property name="text">
+                <string>Blockquote font</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_24">
+               <item>
+                <widget class="QLabel" name="bq_preview">
+                 <property name="styleSheet">
+                  <string notr="true">border: 1px solid black;</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="text">
+                  <string>This font will be used in blockquotes.</string>
+                 </property>
+                 <property name="textFormat">
+                  <enum>Qt::PlainText</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="bq_change_font">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="font">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="bq_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Local Link Color</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Foreign Link Color</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Cross-Scheme-Color</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0">
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Local Link Prefix</string>
+               </property>
+              </widget>
+             </item>
+             <item row="11" column="0">
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>Extern Link Prefix</string>
+               </property>
+              </widget>
+             </item>
+             <item row="11" column="1">
+              <widget class="QLineEdit" name="link_foreign_prefix">
+               <property name="text">
+                <string>⇒ </string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="1">
+              <widget class="QLineEdit" name="link_local_prefix">
+               <property name="text">
+                <string>→ </string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_20">
+               <item>
+                <widget class="QLabel" name="link_local_preview">
+                 <property name="text">
+                  <string>This is a local reference</string>
+                 </property>
+                 <property name="textFormat">
+                  <enum>Qt::PlainText</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="link_local_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="8" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_21">
+               <item>
+                <widget class="QLabel" name="link_foreign_preview">
+                 <property name="text">
+                  <string>This is a foreign reference</string>
+                 </property>
+                 <property name="textFormat">
+                  <enum>Qt::PlainText</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="link_foreign_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="9" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_22">
+               <item>
+                <widget class="QLabel" name="link_cross_preview">
+                 <property name="text">
+                  <string>This reference is cross-scheme</string>
+                 </property>
+                 <property name="textFormat">
+                  <enum>Qt::PlainText</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="link_cross_change_color">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="13" column="0">
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>Auto-Theme Generation</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="1">
+              <widget class="QComboBox" name="auto_theme"/>
+             </item>
+
+             <item row="14" column="0">
+              <widget class="QLabel" name="label_13">
+               <property name="text">
+                <string>Left/right Page Margin</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="1">
+              <widget class="QDoubleSpinBox" name="page_margin_h">
+               <property name="suffix">
+                <string> px</string>
+               </property>
+               <property name="decimals">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <double>350</double>
+               </property>
+              </widget>
+             </item>
+
+             <item row="15" column="0">
+              <widget class="QLabel" name="label_32">
+               <property name="text">
+                <string>Top/bottom Page Margin</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="1">
+              <widget class="QDoubleSpinBox" name="page_margin_v">
+               <property name="suffix">
+                <string> px</string>
+               </property>
+               <property name="decimals">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <double>350</double>
+               </property>
+              </widget>
+             </item>
+
+             <item row="16" column="0">
+              <widget class="QLabel" name="label_25">
+               <property name="text">
+                <string>Other options</string>
+               </property>
+              </widget>
+             </item>
+             <item row="16" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_98">
+               <item>
+                <widget class="QCheckBox" name="enable_justify_text">
+                 <property name="text">
+                  <string>Justify text</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>Justify text on the page, instead of left-aligning it.</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="enable_centre_h1">
+                 <property name="text">
+                  <string>Centre first H1 </string>
+                 </property>
+                 <property name="toolTip">
+                  <string>Whether to centre the first top-level heading in the document.</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+
+             <item row="17" column="0">
+              <widget class="QLabel" name="label_38">
+               <property name="text">
+                <string>Text width limit</string>
+               </property>
+               <property name="toolTip">
+                <string>Preferred width of formatted text on the page.</string>
+               </property>
+              </widget>
+             </item>
+             <item row="17" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_26">
+               <item>
+                <widget class="QSpinBox" name="text_width">
+                 <property name="minimum">
+                  <number>300</number>
+                 </property>
+                 <property name="value">
+                  <number>900</number>
+                 </property>
+                 <property name="maximum">
+                  <number>2000</number>
+                 </property>
+                 <property name="suffix">
+                  <string> px</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="enable_text_width">
+                 <property name="text">
+                  <string>Enabled</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>Whether to limit the width of formatted text on the page or not.</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+
+             <item row="18" column="0">
+              <widget class="QLabel" name="label_35">
+               <property name="text">
+                <string>Line height (paragraph)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="1">
+              <widget class="QDoubleSpinBox" name="line_height_p">
+               <property name="suffix">
+                <string> px</string>
+               </property>
+               <property name="decimals">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <double>30</double>
+               </property>
+              </widget>
+             </item>
+
+             <item row="19" column="0">
+              <widget class="QLabel" name="label_36">
+               <property name="text">
+                <string>Line height (header)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="1">
+              <widget class="QDoubleSpinBox" name="line_height_h">
+               <property name="suffix">
+                <string> px</string>
+               </property>
+               <property name="decimals">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <double>30</double>
+               </property>
+              </widget>
+             </item>
+
+             <item row="20" column="0">
+              <widget class="QLabel" name="label_37">
+               <property name="text">
+                <string>Indentation</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="1">
+              <layout class="QHBoxLayout" name="indent_container">
+
+               <item>
+                <widget class="QLabel" name="label_96">
+                 <property name="text">
+                  <string>Par:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="indent_p">
+                 <property name="value">
+                  <number>1</number>
+                 </property>
+                 <property name="minimum">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <number>7</number>
+                 </property>
+                </widget>
+               </item>
+
+               <item>
+                <widget class="QLabel" name="label_94">
+                 <property name="text">
+                  <string>Hea:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="indent_h">
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                 <property name="minimum">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <number>7</number>
+                 </property>
+                </widget>
+               </item>
+
+               <item>
+                <widget class="QLabel" name="label_95">
+                 <property name="text">
+                  <string>Quo:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="indent_bq">
+                 <property name="value">
+                  <number>2</number>
+                 </property>
+                 <property name="minimum">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <number>7</number>
+                 </property>
+                </widget>
+               </item>
+
+               <item>
+                <widget class="QLabel" name="label_93">
+                 <property name="text">
+                  <string>Lst:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="indent_l">
+                 <property name="value">
+                  <number>2</number>
+                 </property>
+                 <property name="minimum">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <number>7</number>
+                 </property>
+                </widget>
+               </item>
+
+              </layout>
+             </item>
+
+             <item row="21" column="0">
+              <widget class="QLabel" name="label_42">
+               <property name="text">
+                <string>Indent size</string>
+               </property>
+              </widget>
+             </item>
+             <item row="21" column="1">
+              <widget class="QDoubleSpinBox" name="indent_size">
+               <property name="suffix">
+                <string> px</string>
+               </property>
+               <property name="decimals">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <double>100</double>
+               </property>
+              </widget>
+             </item>
+
+             <item row="22" column="0">
+              <widget class="QLabel" name="label_41">
+               <property name="text">
+                <string>List item marker</string>
+               </property>
+              </widget>
+             </item>
+             <item row="22" column="1">
+              <widget class="QComboBox" name="list_symbol"/>
+             </item>
+
+             <item row="12" column="0">
+              <widget class="QLabel" name="label_21">
+               <property name="text">
+                <string>Block Quote Background</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QLabel" name="quote_preview">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="quote_change_color">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="palette">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <layout class="QFormLayout" name="formLayout_6">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Presets</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QComboBox" name="presets"/>
+             </item>
+             <item>
+              <widget class="QToolButton" name="preset_new">
+               <property name="toolTip">
+                <string>Save as new preset</string>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="icon">
+                <iconset theme="document-new"/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="preset_save">
+               <property name="toolTip">
+                <string>Override current preset</string>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="icon">
+                <iconset theme="document-save"/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="preset_load">
+               <property name="toolTip">
+                <string>Load preset</string>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="icon">
+                <iconset theme="folder">
+                 <normaloff>.</normaloff>.</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="preset_import">
+               <property name="toolTip">
+                <string>Imports preset…</string>
+               </property>
+               <property name="toolTipDuration">
+                <number>-1</number>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="icon">
+                <iconset theme="document-import"/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="preset_export">
+               <property name="toolTip">
+                <string>Export preset…</string>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="icon">
+                <iconset theme="document-export"/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QTextBrowser" name="style_preview">
+           <property name="openLinks">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="preview_url">
+           <property name="placeholderText">
+            <string>host.name</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gem_trust_page">
+      <attribute name="icon">
+       <iconset theme="view-certificate"/>
+      </attribute>
+      <attribute name="title">
+       <string>Gemini TLS</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="SslTrustEditor" name="gemini_trust_editor" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="https_trust">
+      <attribute name="icon">
+       <iconset theme="view-certificate"/>
+      </attribute>
+      <attribute name="title">
+       <string>HTTPS TLS</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="SslTrustEditor" name="https_trust_editor" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SslTrustEditor</class>
+   <extends>QWidget</extends>
+   <header>widgets/ssltrusteditor.hpp</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>ui_theme</tabstop>
+  <tabstop>icon_theme</tabstop>
+  <tabstop>ui_density</tabstop>
+  <tabstop>start_page</tabstop>
+  <tabstop>search_engine</tabstop>
+  <tabstop>enable_gemini</tabstop>
+  <tabstop>enable_gopher</tabstop>
+  <tabstop>enable_finger</tabstop>
+  <tabstop>enable_http</tabstop>
+  <tabstop>enable_https</tabstop>
+  <tabstop>fancypants_on</tabstop>
+  <tabstop>fancypants_off</tabstop>
+  <tabstop>texthl_on</tabstop>
+  <tabstop>texthl_off</tabstop>
+  <tabstop>gophermap_icon</tabstop>
+  <tabstop>gophermap_text</tabstop>
+  <tabstop>scheme_os_default</tabstop>
+  <tabstop>scheme_error</tabstop>
+  <tabstop>show_hidden_files</tabstop>
+  <tabstop>hide_hidden_files</tabstop>
+  <tabstop>urlbarhl_fancy</tabstop>
+  <tabstop>urlbarhl_none</tabstop>
+  <tabstop>fancyquotes_on</tabstop>
+  <tabstop>fancyquotes_off</tabstop>
+  <tabstop>emojis_on</tabstop>
+  <tabstop>emojis_off</tabstop>
+  <tabstop>max_redirects</tabstop>
+  <tabstop>redirection_mode</tabstop>
+  <tabstop>network_timeout</tabstop>
+  <tabstop>enable_home_btn</tabstop>
+  <tabstop>enable_newtab_btn</tabstop>
+  <tabstop>enable_root_btn</tabstop>
+  <tabstop>enable_parent_btn</tabstop>
+  <tabstop>cache_limit</tabstop>
+  <tabstop>cache_threshold</tabstop>
+  <tabstop>cache_life</tabstop>
+  <tabstop>enable_unlimited_cache_life</tabstop>
+  <tabstop>bg_change_color</tabstop>
+  <tabstop>style_preview</tabstop>
+  <tabstop>std_change_font</tabstop>
+  <tabstop>std_change_color</tabstop>
+  <tabstop>pre_change_font</tabstop>
+  <tabstop>pre_change_color</tabstop>
+  <tabstop>h1_change_font</tabstop>
+  <tabstop>h1_change_color</tabstop>
+  <tabstop>h2_change_font</tabstop>
+  <tabstop>h2_change_color</tabstop>
+  <tabstop>h3_change_font</tabstop>
+  <tabstop>h3_change_color</tabstop>
+  <tabstop>bq_change_font</tabstop>
+  <tabstop>bq_change_color</tabstop>
+  <tabstop>link_local_change_color</tabstop>
+  <tabstop>link_foreign_change_color</tabstop>
+  <tabstop>link_cross_change_color</tabstop>
+  <tabstop>link_local_prefix</tabstop>
+  <tabstop>link_foreign_prefix</tabstop>
+  <tabstop>quote_change_color</tabstop>
+  <tabstop>auto_theme</tabstop>
+  <tabstop>page_margin_h</tabstop>
+  <tabstop>page_margin_v</tabstop>
+  <tabstop>enable_justify_text</tabstop>
+  <tabstop>enable_centre_h1</tabstop>
+  <tabstop>text_width</tabstop>
+  <tabstop>enable_text_width</tabstop>
+  <tabstop>line_height_p</tabstop>
+  <tabstop>line_height_h</tabstop>
+  <tabstop>indent_p</tabstop>
+  <tabstop>indent_h</tabstop>
+  <tabstop>indent_bq</tabstop>
+  <tabstop>indent_l</tabstop>
+  <tabstop>list_symbol</tabstop>
+  <tabstop>presets</tabstop>
+  <tabstop>preset_new</tabstop>
+  <tabstop>preset_save</tabstop>
+  <tabstop>preset_load</tabstop>
+  <tabstop>preset_import</tabstop>
+  <tabstop>preset_export</tabstop>
+  <tabstop>preview_url</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="gophermapBtnGroup"/>
+  <buttongroup name="textHighlightsBtnGroup"/>
+  <buttongroup name="textRenderingBtnGroup"/>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="hiddenFilesBtnGroup"/>
+  <buttongroup name="urlbarBtnGroup"/>
+  <buttongroup name="quotesBtnGroup"/>
+  <buttongroup name="emojisBtnGroup"/>
+ </buttongroups>
+</ui>

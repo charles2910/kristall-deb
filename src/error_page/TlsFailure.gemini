@@ -1,0 +1,7 @@
+# TLS Failure
+
+There was an error while negotiating the TLS encryption.
+
+> %1
+
+=> kristall+ctrl:ignore-tls Continue to site
