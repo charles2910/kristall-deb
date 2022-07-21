@@ -8,7 +8,7 @@ Build-Depends: debhelper-compat (= 13),
                libssl-dev,
                qt5-qmake,
                qtmultimedia5-dev
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Rules-Requires-Root: no
 Homepage: https://kristall.random-projects.net/
 Vcs-Git: https://salsa.debian.org/debian/kristall.git
