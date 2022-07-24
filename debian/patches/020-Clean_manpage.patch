@@ -1,7 +1,8 @@
 Description: removes built manpage on clean
 Author: Carlos Henrique Lima Melara <charlesmelara@outlook.com>
 Forwarded: https://github.com/MasterQ32/kristall/pull/185
-Last-Update: 2021-03-04
+Applied-Upstream: 0.4, https://github.com/MasterQ32/kristall/commit/a6f4bb38b7d3000158034115cbc9858a407e5a52
+Last-Update: 2022-07-24
 
 Index: kristall-0.3+git20210303.763bd81/Makefile
 ===================================================================
