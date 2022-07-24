@@ -1,7 +1,8 @@
 Description: Hack to include CPPFLAGS with qmake compilation
 Author: Carlos Henrique Lima Melara <charlesmelara@outlook.com>
-Forwarded: https://github.com/MasterQ32/kristall/issues/244
-Last-Update: 2021-09-12
+Bug: https://github.com/MasterQ32/kristall/issues/244
+Applied-Upstream: 0.4, https://github.com/MasterQ32/kristall/commit/be009e47529ea4118079928d7e7f3d3b4123c472
+Last-Update: 2022-07-24
 
 Index: kristall/src/kristall.pro
 ===================================================================
