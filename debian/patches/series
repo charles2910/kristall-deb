@@ -2,3 +2,4 @@
 020-Clean_manpage.patch
 030-Make_build_reproducible.patch
 040-Fix_CPPFLAGS_in_qmake.patch
+050-Make_reproducible_usrmerged.patch

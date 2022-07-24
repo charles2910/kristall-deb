@@ -1,0 +1,13 @@
+Description: make reproducible in usrmerged systems
+Bug-Debian: https://bugs.debian.org/1007094
+Origin: upstream, https://github.com/MasterQ32/kristall/commit/5c59e94d941531a099d097d11bfc31274a932229
+Last-Update: 2022-07-24
+
+--- kristall-0.3+git20210303.763bd81+dfsg.orig/doc/gem-to-man.awk
++++ kristall-0.3+git20210303.763bd81+dfsg/doc/gem-to-man.awk
+@@ -1,4 +1,4 @@
+-#!/bin/awk -f
++#!/usr/bin/env -S awk -f
+ 
+ BEGIN {
+     preformatted=0
