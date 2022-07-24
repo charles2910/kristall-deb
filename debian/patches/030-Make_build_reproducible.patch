@@ -1,7 +1,8 @@
-Description: Removes date from manpage and make kristall reproducible
+Description: Removes date from manpage to make kristall reproducible
 Author: Carlos Henrique Lima Melara <charlesmelara@outlook.com>
-Forwarded: https://github.com/MasterQ32/kristall/issues/244
-Last-Update: 2021-09-11
+Bug: https://github.com/MasterQ32/kristall/issues/244
+Applied-Upstream: 0.4, https://github.com/MasterQ32/kristall/commit/7a5499d7a264d48c398063988ff4d246a5063f42
+Last-Update: 2022-07-24
 
 --- kristall-0.3+git20210303.763bd81+dfsg.orig/doc/kristall-head.man
 +++ kristall-0.3+git20210303.763bd81+dfsg/doc/kristall-head.man
