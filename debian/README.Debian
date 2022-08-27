@@ -1,0 +1,7 @@
+Running kristall on gnome/wayland (default) generates the following warning:
+
+ Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+
+If you try to set QT_QPA_PLATFORM=wayland without qtwayland5 package installed,
+kristall will fail to launch. To fix it and run kristall natively on wayland,
+please install the qtwayland5 package. For further info, refer to bug #1018251.
