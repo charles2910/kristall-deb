@@ -1,3 +1,4 @@
 # Overriding a false positive (an ocasional byte sequence, not a word).
 kristall: spelling-error-in-binary mOR more [usr/bin/kristall]
 kristall: spelling-error-in-binary whE when [usr/bin/kristall]
+kristall: spelling-error-in-binary curren current [usr/bin/kristall]
