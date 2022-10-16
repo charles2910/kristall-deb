@@ -1,3 +1,20 @@
+kristall (0.3+git20210303.763bd81+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * debian/README.Debian: created to explain how to deal with #1018251.
+  * debian/control: bumped Standards-Version to 4.6.1.
+  * debian/copyright: updated packaging copyright years.
+  * debian/gbp.conf: added gbp.conf file.
+  * debian/lintian-overrides: add and update text to match current lintian
+    messages.
+  * debian/patches/:
+      - {020,030,040}*: updated patch headers.
+      - 050-Make_reproducible_usrmerged.patch: added cherry-pick from
+        upstream. Thanks to Vagrant Cascadian for reporting. (Closes: #1007094)
+  * debian/watch: update (fix) watch file to work with github
+
+ -- Carlos Henrique Lima Melara <charlesmelara@outlook.com>  Sun, 16 Oct 2022 01:25:29 -0300
+
 kristall (0.3+git20210303.763bd81+dfsg-1) experimental; urgency=medium
 
   * Initial release. (Closes: #984530)
